@@ -1,0 +1,17 @@
+{
+    "name": "saber/think_json_log_view",
+    "authors": [
+        {
+            "name": "zhangke",
+            "email": "350224276@qq.com"
+        }
+    ],
+    "require": {
+        "topthink/framework": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\":"logier"
+        }
+    }
+}
