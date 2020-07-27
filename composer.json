@@ -12,9 +12,9 @@
     "autoload": {
         "psr-4": {
             "logier\\":"src/"
-        },
-        "files": [
-            "src/helper.php"
-        ]
+        }
+    },
+    "extra": {
+       "class":"logier//Plugin"
     }
 }
