@@ -7,9 +7,9 @@ use think\composer\ThinkFramework;
 use think\composer\ThinkTesting;
 use think\helper\Str;
 
-class Plugin extends PluginInterface
+class InstallPage
 {
-    public function activate(Composer $composer, IOInterface $io)
+    public function postPackageInstall()
     {
         if (!is_file(app()->getRoutePath().'log.php')){
             $tpl_dir = __DIR__.DIRECTORY_SEPARATOR.'tpl'.DIRECTORY_SEPARATOR;

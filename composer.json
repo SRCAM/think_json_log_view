@@ -14,7 +14,9 @@
             "logier\\":"src/"
         }
     },
-    "extra": {
-       "class":"logier//Plugin"
+    "scripts": {
+        "post-install-cmd":[
+            "logier\\InstallPage::postPackageInstall"
+        ]
     }
 }
