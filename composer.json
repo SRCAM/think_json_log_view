@@ -19,6 +19,9 @@
         }
     },
     "scripts": {
+        "post-package-install":[
+            "logier\\InstallPage::postPackageInstall"
+        ],
         "post-install-cmd":[
             "logier\\InstallPage::postPackageInstall"
         ],
