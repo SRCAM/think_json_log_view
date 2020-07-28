@@ -8,6 +8,10 @@
     ],
     "require": {
         "topthink/framework": "5.1.*"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -16,6 +20,9 @@
     },
     "scripts": {
         "post-install-cmd":[
+            "logier\\InstallPage::postPackageInstall"
+        ],
+        "post-update-cmd": [
             "logier\\InstallPage::postPackageInstall"
         ]
     }
