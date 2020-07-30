@@ -22,7 +22,7 @@ class InstallPage
             file_put_contents($base_path.DIRECTORY_SEPARATOR.'route'.DIRECTORY_SEPARATOR.'log_path.php',$file_put);
             $phpput = str_replace(['{$dir}','{$file}'],[$dir_str,$file_str],file_get_contents($tpl_dir.'index.tpl'));
             file_put_contents(__DIR__.DIRECTORY_SEPARATOR.'view'.DIRECTORY_SEPARATOR.'index.html',$phpput);
-            echo 'succse';
+            echo $home_str;
         }
     }
 
