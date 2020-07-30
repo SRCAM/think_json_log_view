@@ -13,7 +13,6 @@ class LogBaseController extends Controller
     public function index()
     {
 
-//
         $item = $this->scandir();
         $this->assign('list', $item);
         return $this->fetch(__DIR__ . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR . 'index.html');
@@ -29,7 +28,11 @@ class LogBaseController extends Controller
     public function open_file(){
         $log_path = $this->app->getRuntimePath() . 'log'.DIRECTORY_SEPARATOR;
         $path =$log_path.$this->request->param('path');
+        if (!is_file($path)){
+            echo '文件不存在在';
+        }
         $file = file_get_contents($path);
+
         $arr = explode(PHP_EOL,$file);
         $logs = [];
         foreach ($arr as $key=> $item){
